@@ -1,0 +1,199 @@
+Question,Option A,Option B,Option C,Option D,Answer
+What does HTML stand for?,Hyper Text Markup Language,Hyperlinks and Text Markup Language,Home Tool Markup Language,Hyper Transfer Markup Protocol,A
+Which programming language is known as the 'mother of all languages'?,C,Java,Python,Assembly,A
+What does CSS stand for?,Creative Style Sheets,Computer Style Sheets,Cascading Style Sheets,Colorful Style Sheets,C
+Which of these is not a JavaScript framework?,React,Angular,Laravel,Vue.js,C
+What does SQL stand for?,Structured Query Language,Simple Query Language,Standard Query Language,System Query Language,A
+Which protocol is used for secure communication over a computer network?,HTTP,FTP,HTTPS,SMTP,C
+What is the time complexity of binary search?,O(1),O(n),O(log n),O(n^2),C
+Which data structure uses FIFO principle?,Stack,Queue,Tree,Graph,B
+What does API stand for?,Application Programming Interface,Advanced Programming Interface,Automated Programming Interface,Application Process Interface,A
+Which of these is not a relational database management system?,MySQL,MongoDB,PostgreSQL,Oracle,B
+What is the default port for HTTP?,80,443,8080,21,A
+Which language is used for Android app development?,Swift,Kotlin,C#,Ruby,B
+What does DNS stand for?,Domain Name System,Dynamic Name Server,Data Network System,Digital Naming Service,A
+Which tool is used for version control?,Docker,Git,Jenkins,Kubernetes,B
+What is the extension of a Python file?,.py,.js,.java,.html,A
+Which of these is a NoSQL database?,MySQL,PostgreSQL,MongoDB,SQLite,C
+What does VPN stand for?,Virtual Private Network,Visual Private Network,Verified Public Network,Virtual Public Network,A
+Which operator is used for exponentiation in Python?,^,,//,*,B
+What is the output of print(2 + 2 * 2) in Python?,6,8,4,10,A
+Which OS is open-source?,Windows,MacOS,Linux,ChromeOS,C
+What does IDE stand for?,Integrated Development Environment,Internal Development Environment,Interactive Development Engine,Integrated Debugging Environment,A
+Which protocol is used for sending emails?,HTTP,FTP,SMTP,SSH,C
+What is the complexity of a bubble sort in the worst case?,O(n),O(n log n),O(n^2),O(log n),C
+Which HTML tag is used for creating a hyperlink?,<a>,<link>,<href>,<hyperlink>,A
+What is the main purpose of Docker?,Version Control,Virtualization,Containerization,Data Analysis,C
+Which command is used to list files in Linux?,ls,dir,list,show,A
+What does RAM stand for?,Random Access Memory,Read-Only Memory,Remote Access Memory,Rapid Access Memory,A
+Which data type is used for true/false values in Python?,bool,int,float,string,A
+"What is the output of ""Hello"" + ""World"" in Python?",HelloWorld,Hello World,Error,None,A
+Which of these is a compiled language?,Python,JavaScript,Java,PHP,C
+What does URL stand for?,Uniform Resource Locator,Universal Resource Locator,Unified Resource Link,Uniform Redirect Link,A
+Which CSS property is used to change text color?,font-color,text-color,color,font-style,C
+What is the default port for HTTPS?,80,443,8080,21,B
+Which command is used to install packages in Python?,install,pip,get,import,B
+What does OOP stand for?,Object-Oriented Programming,Operational Object Programming,Organized Object Protocol,Open Object Protocol,A
+Which of these is not a Python framework?,Django,Flask,Spring,Laravel,C
+"What is the output of 3 == ""3"" in JavaScript?",True,False,Error,None,B
+Which symbol is used for comments in Python?,//,#,/* */,<!--,B
+What does SSD stand for?,Solid State Drive,Super Speed Drive,Serial Storage Device,Static Storage Device,A
+Which algorithm is used for shortest path finding?,Bubble Sort,Quick Sort,Dijkstra's,Binary Search,C
+What is the extension of a compiled Java file?,.java,.class,.exe,.jar,B
+Which command is used to create a directory in Linux?,mkdir,md,create,newdir,A
+What does CPU stand for?,Central Processing Unit,Computer Processing Unit,Core Processing Unit,Control Processing Unit,A
+Which HTTP method is used for sending data to a server?,GET,POST,PUT,DELETE,B
+What is the output of Math.floor(3.7) in JavaScript?,3,4,3.7,Error,A
+Which of these is not a valid IP address?,192.168.1.1,256.0.0.1,172.16.254.1,10.0.0.1,B
+What does JSON stand for?,JavaScript Object Notation,Java Standard Object Notation,JavaScript Oriented Notation,JSON Object Notation,A
+Which Python library is used for numerical computations?,NumPy,Pandas,Matplotlib,Requests,A
+What is the maximum value of an 8-bit integer?,127,255,256,1023,B
+Which protocol is used for dynamic IP assignment?,HTTP,DHCP,FTP,SSH,B
+What does GUI stand for?,Graphical User Interface,General User Interface,Graphical Unified Interface,Global User Interface,A
+Which operator is used for modulo in Python?,%,mod,//,#,A
+"What is the output of ""hello"".upper() in Python?",HELLO,Hello,Error,None,A
+Which of these is not a cloud service provider?,AWS,Azure,Google Cloud,Oracle Cloud,D
+What does BIOS stand for?,Basic Input Output System,Boot Input Output System,Binary Input Output Service,Basic Integrated Operating System,A
+Which sorting algorithm has the best average-case time complexity?,Bubble Sort,Merge Sort,Quick Sort,Insertion Sort,C
+What is the extension of a JavaScript file?,.js,.java,.py,.html,A
+Which command is used to check your current directory in Linux?,pwd,ls,cd,whereami,A
+What does XML stand for?,Extensible Markup Language,Extended Markup Language,Executable Markup Language,External Markup Language,A
+Which Python data type is immutable?,list,dict,set,tuple,D
+What is the output of 10 / 3 in Python?,3,3.333...,3,Error,B
+Which of these is not a valid programming paradigm?,Object-Oriented,Functional,Procedural,Linear,D
+What does CLI stand for?,Command Line Interface,Computer Language Interface,Common Line Interpreter,Control Line Interface,A
+Which data structure uses LIFO principle?,Queue,Stack,Tree,Graph,B
+What is the default port for SSH?,22,80,443,21,A
+Which HTML tag is used for JavaScript?,<script>,<js>,<javascript>,<code>,A
+What does MVC stand for?,Model View Controller,Main View Controller,Model Visual Control,Module View Controller,A
+Which operator is used for logical AND in Python?,AND,&,&&,and,D
+What is the output of 0.1 + 0.2 == 0.3 in Python?,True,False,Error,None,B
+Which of these is not a JavaScript data type?,string,number,boolean,float,D
+What does IoT stand for?,Internet of Things,Intranet of Things,Integrated Online Technology,Internet Online Transfer,A
+Which Python function is used to read user input?,input(),read(),get(),scan(),A
+What is the complexity of merge sort in the worst case?,O(n),O(n log n),O(n^2),O(log n),B
+Which protocol is used for file transfer?,HTTP,FTP,SMTP,DHCP,B
+What does AJAX stand for?,Asynchronous JavaScript and XML,Advanced JavaScript and XML,Automated JSON and XML,Asynchronous jQuery and XML,A
+Which command is used to remove a file in Linux?,rm,del,remove,erase,A
+What is the output of 2 ** 3 in Python?,6,8,9,Error,B
+Which of these is not a valid variable name in Python?,my_var,_var,123var,var123,C
+What does CDN stand for?,Content Delivery Network,Computer Data Network,Cached Data Node,Centralized Data Network,A
+Which data structure allows O(1) average time complexity for insertions and deletions?,Array,Linked List,Hash Table,Stack,C
+What is the extension of a compressed archive file?,.zip,.exe,.doc,.py,A
+Which CSS property is used for element positioning?,display,position,align,layout,B
+What does SaaS stand for?,Software as a Service,Storage as a Service,System as a Service,Server as a Service,A
+Which Python library is used for data analysis?,NumPy,Pandas,Matplotlib,SciPy,B
+"What is the output of len(""Python"") in Python?",5,6,7,Error,B
+Which of these is not a Linux distribution?,Ubuntu,Debian,Windows,CentOS,C
+What does TCP stand for?,Transmission Control Protocol,Transfer Control Protocol,Telecommunication Control Protocol,Traffic Control Protocol,A
+Which HTML tag is used for an unordered list?,<ul>,<ol>,<li>,<list>,A
+What is the complexity of linear search in the worst case?,O(1),O(n),O(log n),O(n^2),B
+Which command is used to update package lists in Ubuntu?,apt update,apt upgrade,apt install,apt remove,A
+What does RGB stand for?,Red Green Blue,Red Gray Black,Row Grid Binary,Random Gradient Blend,A
+Which JavaScript method is used to print to the console?,print(),log(),console.log(),display(),C
+"What is the output of ""5"" + 2 in JavaScript?",52,7,5 2,Error,A
+Which of these is not a valid HTML5 tag?,<header>,<footer>,<sidebar>,<article>,C
+What does REST stand for?,Representational State Transfer,Remote State Transfer,Resource State Transfer,Representative State Transfer,A
+Which Python keyword is used for defining functions?,def,function,define,func,A
+What is the default port for MySQL?,80,3306,5432,27017,B
+Which of these is not a valid CSS unit?,px,em,rem,ppm,D
+What does ASCII stand for?,American Standard Code for Information Interchange,Advanced System Code for Information Interchange,American Symbolic Code for Information Interchange,Automated Standard Code for Internet Communication,A
+Which command is used to clone a Git repository?,git clone,git copy,git pull,git download,A
+What is the primary purpose of an ORM (Object-Relational Mapping)?,To map objects to database tables,To optimize network traffic,To encrypt data,To compile code,A
+Which Python library is used for machine learning?,NumPy,TensorFlow,Pandas,Matplotlib,B
+What does the yield keyword do in Python?,Returns a value and terminates the function,Returns a generator object,Pauses the function and returns a value,Skips the current iteration,C
+Which protocol is used by DNS?,TCP,UDP,HTTP,FTP,B
+What is the output of 5 // 2 in Python?,2.5,2,3,Error,B
+Which data structure is used for recursion calls?,Queue,Stack,Heap,Tree,B
+What does the finally block do in exception handling?,Executes if no exception occurs,Executes only if an exception occurs,Always executes,Skips execution,C
+"Which HTTP status code means ""Not Found""?",200,302,404,500,C
+What is the main use of Kubernetes?,Version control,Container orchestration,Database management,Networking,B
+Which command lists all running processes in Linux?,ps,ls,top,process,A
+What does the *args syntax do in Python?,Unpacks a dictionary,Handles variable-length arguments,Multiplies numbers,Creates a list,B
+Which algorithm is used for page replacement in OS?,Dijkstra's,LRU,Bubble Sort,Quick Sort,B
+What is the extension of a TypeScript file?,.ts,.js,.ty,.typescript,A
+Which database is column-family based?,MySQL,MongoDB,Cassandra,PostgreSQL,C
+What does the volatile keyword do in Java?,Ensures thread safety,Optimizes memory usage,Prevents variable modification,Marks a variable as constant,A
+Which tool is used for containerization?,Git,Docker,Jenkins,Kubernetes,B
+What is the output of 'abc' * 2 in Python?,'abcabc','abc2','aabbcc',Error,A
+Which sorting algorithm is in-place?,Merge Sort,Quick Sort,Heap Sort,Both B and C,D
+What does the @staticmethod decorator do in Python?,Marks a method as abstract,Makes a method belong to the class (not instance),Prevents method overriding,Enforces static typing,B
+Which protocol is stateless?,HTTP,FTP,SMTP,Telnet,A
+What is the complexity of hash table lookups?,O(1),O(n),O(log n),O(n^2),A
+Which Python library is used for plotting graphs?,NumPy,Pandas,Matplotlib,Seaborn,C
+What does the super() function do in Python?,Calls the parent class method,Creates a superuser,Skips class inheritance,Terminates the program,A
+Which command shows disk usage in Linux?,du,df,disk,usage,B
+What is the default port for MySQL?,3306,5432,27017,8080,A
+Which data structure is used in BFS?,Stack,Queue,Heap,Tree,B
+What does the zip() function do in Python?,Compresses files,Combines iterables element-wise,Unzips files,Encrypts data,B
+Which algorithm guarantees shortest path in a weighted graph?,BFS,Dijkstra's,DFS,Bubble Sort,B
+"What is the output of bool(""False"") in Python?",True,False,Error,None,A
+Which HTTP method is idempotent?,POST,PUT,DELETE,Both B and C,D
+What does the __init__.py file do in Python?,Initializes the interpreter,Marks a directory as a Python package,Starts a server,Compiles code,B
+Which protocol is used for clock synchronization?,NTP,DHCP,SNMP,ICMP,A
+What is the extension of a Markdown file?,.md,.mkd,.markdown,.txt,A
+Which Python library is used for web scraping?,BeautifulSoup,Scrapy,Requests,All of the above,D
+What does the lambda keyword do in Python?,Defines an anonymous function,Creates a loop,Imports a module,Handles exceptions,A
+Which command checks connectivity between two hosts?,ping,traceroute,netstat,ifconfig,A
+What is the output of [x for x in range(3)] in Python?,"[0, 1, 2]","[1, 2, 3]",Error,[3],A
+Which data structure is used in DFS?,Queue,Stack,Heap,Tree,B
+What does the any() function do in Python?,Checks if all elements are True,Checks if any element is True,Returns all elements,Counts elements,B
+Which algorithm uses divide-and-conquer?,Bubble Sort,Merge Sort,Selection Sort,Insertion Sort,B
+What is the output of 'Hello'.islower() in Python?,True,False,Error,None,B
+Which Python library is used for scientific computing?,NumPy,Pandas,Matplotlib,Seaborn,A
+What does the __str__ method do in Python?,Initializes an object,Returns a string representation,Deletes an object,Compares objects,B
+Which command lists environment variables in Linux?,env,printenv,set,All of the above,D
+What is the default port for PostgreSQL?,3306,5432,27017,8080,B
+Which data structure is used in LRU cache?,Queue,Stack,Hash Map + Doubly Linked List,Heap,C
+What does the map() function do in Python?,Creates a dictionary,Applies a function to iterable items,Draws a map,Filters elements,B
+Which sorting algorithm has worst-case O(n log n)?,Quick Sort,Merge Sort,Insertion Sort,Bubble Sort,B
+What is the output of 'Python'[1:4] in Python?,'Pyth','yth','ytho','thon',B
+Which HTTP header is used for content type?,Content-Type,Accept,Authorization,Cache-Control,A
+What does the __name__ variable equal when a script is run directly?,__main__,__direct__,__script__,__file__,A
+Which protocol is used for network management?,SNMP,SMTP,HTTP,DHCP,A
+What is the extension of a Dockerfile?,.docker,.df,.dcr,No extension,D
+Which Python library is used for async programming?,asyncio,threading,multiprocessing,concurrent,A
+What does the enumerate() function do in Python?,Counts elements,Adds indices to iterable,Sorts items,Filters items,B
+Which command shows active network connections?,netstat,ifconfig,ping,traceroute,A
+Which data structure is used in priority queues?,Stack,Queue,Heap,Tree,C
+What does the all() function do in Python?,Checks if all elements are True,Checks if any element is True,Returns all elements,Counts elements,A
+Which algorithm is used in Python's sorted() function?,Quick Sort,Timsort,Merge Sort,Heap Sort,B
+Which Python library is used for SQLite?,sqlite3,pymysql,psycopg2,sqlalchemy,A
+What does the __del__ method do in Python?,Initializes an object,Deletes an object,Compares objects,Serializes an object,B
+Which command compresses files in Linux?,gzip,tar,zip,compress,A
+What is the default port for MongoDB?,3306,5432,27017,8080,C
+Which data structure is used in Redis?,Stack,Queue,Hash Table,All of the above,D
+What does the filter() function do in Python?,Creates a dictionary,Applies a function to filter items,Sorts items,Counts items,B
+Which algorithm is used for cycle detection in graphs?,Dijkstra's,Floyd-Warshall,Union-Find,Depth-First Search,C
+What is the output of 'Python'.find('th') in Python?,2,3,4,-1,A
+Which HTTP method is safe?,GET,POST,PUT,DELETE,A
+What does the __dict__ attribute contain in Python?,Class methods,Instance variables,Module names,Docstrings,B
+Which protocol is used for VoIP?,HTTP,FTP,SIP,SMTP,C
+What is the extension of a YAML file?,.yml,.yaml,.yml or .yaml,.data,C
+Which Python library is used for testing?,unittest,pytest,nose,All of the above,D
+What does the reduce() function do in Python?,Applies a rolling computation to iterable,Decreases memory usage,Skips iterations,Terminates early,A
+Which command shows system logs in Linux?,dmesg,log,syslog,cat /var/log/syslog,A
+What is the output of 'Python'.split('t') in Python?,"['Py', 'hon']","['Pyth', 'on']","['P', 'hon']",Error,A
+Which data structure is used in Python's collections.deque?,Linked List,Array,Hash Table,Tree,A
+What does the hasattr() function do in Python?,Checks if an attribute exists,Deletes an attribute,Adds an attribute,Lists attributes,A
+Which algorithm is used for regex matching?,Knuth-Morris-Pratt,Boyer-Moore,Thompson's NFA,All of the above,D
+What is the output of 'Python'.endswith('on') in Python?,True,False,Error,None,A
+Which Python library is used for GUI development?,tkinter,PyQt,Kivy,All of the above,D
+What does the __slots__ attribute do in Python?,Prevents dynamic attribute creation,Speeds up class execution,Reduces memory usage,All of the above,D
+Which command searches for text in files in Linux?,grep,find,locate,search,A
+What is the default port for Redis?,3306,5432,6379,8080,C
+Which data structure is used in Python's heapq module?,Stack,Queue,Heap,Tree,C
+What does the functools.partial function do in Python?,Freezes function arguments,Creates decorators,Handles exceptions,Optimizes recursion,A
+Which algorithm is used in Git for diffing?,Myers,Levenshtein,Dijkstra's,Knuth-Morris-Pratt,A
+What is the output of 'Python'[::-1] in Python?,'Pytho','nohtyP','Python',Error,B
+Which HTTP header prevents caching?,Cache-Control,Expires,Pragma,All of the above,D
+What does the __bases__ attribute contain in Python?,Parent classes,Class methods,Instance variables,Docstrings,A
+Which protocol is used for streaming media?,RTSP,HTTP,FTP,SMTP,A
+What is the extension of a Go file?,.go,.golang,.goo,.src,A
+Which Python library is used for compression?,zlib,gzip,bz2,All of the above,D
+What does the itertools.chain function do in Python?,Combines iterables,Splits iterables,Sorts iterables,Filters iterables,A
+Which command monitors real-time processes in Linux?,top,htop,ps,monitor,B
+What is the output of 'Python'.isnumeric() in Python?,True,False,Error,None,B
+Which data structure is used in Python's OrderedDict?,Linked List,Hash Table,Both A and B,Tree,C
+What does the __annotations__ attribute contain in Python?,Type hints,Class methods,Docstrings,Instance variables,A
+Which algorithm is used in Bitcoin's blockchain?,SHA-256,RSA,AES,MD5,A
