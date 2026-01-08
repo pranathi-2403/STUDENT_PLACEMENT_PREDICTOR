@@ -71,16 +71,6 @@ The system automates assessment, scoring, and prediction using a trained ML mode
 - Loaded into Flask app for predictions
 
 ---
-## 📈 Future Enhancements
-
--User authentication & login system
--Database integration (MySQL / MongoDB)
--Company-specific readiness prediction
--Advanced ML models (XGBoost, Random Forest)
--Admin dashboard for analytics
--Resume parsing using NLP
-
----
 
 The ML-Based Student Placement Readiness Predictor demonstrates how machine learning can be effectively applied to solve real-world academic and career challenges. By combining automated assessments, intelligent scoring, and predictive analytics, this project delivers a practical solution that bridges the gap between student skills and industry expectations.
 
