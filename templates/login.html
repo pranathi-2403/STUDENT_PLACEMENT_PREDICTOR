@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Placement Readiness Portal</title>
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/s1.css') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+     <header class="header auth-header">
+            <a href="/dashboard" class="logo">
+                <h1 class="logo-text">
+                    CampusFit <span>🎓</span>
+                </h1>
+            </a>
+
+            <nav class="nav-links">
+                <a href="/aptitude_test" class="nav-link">
+                    <i class="fas fa-brain"></i>
+                    <span>Aptitude</span>
+                </a>
+
+                <a href="/technical_test" class="nav-link">
+                    <i class="fas fa-code"></i>
+                    <span>Technical</span>
+                </a>
+
+                <a href="/communication_test" class="nav-link">
+                    <i class="fas fa-comments"></i>
+                    <span>Communication</span>
+                </a>
+
+                <a href="/upload_resume" class="nav-link">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Resume</span>
+                </a>
+
+                <a href="/results" class="nav-link">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Results</span>
+                </a>
+            </nav>
+        </header>
+
+  <div class="background-overlay">
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+    </div>
+    
+    <div class="login-container">
+      <div class="logo-container">
+        <div class="logo-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h1 id='logo'>Welcome Back</h1>
+        <p class="subtitle">Sign in to continue your journey</p>
+      </div>
+      
+      <form action="/login" method="post" class="login-form">
+        <div class="input-group">
+          <div class="input-wrapper">
+            <i class="fas fa-user input-icon"></i>
+            <input
+              type="text"
+              name="username"
+              placeholder="Enter your username"
+              required
+              aria-label="Username"
+              class="animated-input"
+            />
+            <div class="input-line"></div>
+          </div>
+        </div>
+        
+        <div class="input-group">
+          <div class="input-wrapper">
+            <i class="fas fa-lock input-icon"></i>
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+              aria-label="Password"
+              class="animated-input"
+            />
+            <div class="input-line"></div>
+          </div>
+        </div>
+
+        <div class="options">
+          <label class="checkbox-container">
+            <input type="checkbox" name="remember" />
+            <span class="checkmark"></span>
+            Remember me
+          </label>
+          <a href="#" class="forgot-link">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="login-btn">
+          <span class="btn-text">Sign In</span>
+          <i class="fas fa-arrow-right btn-icon"></i>
+        </button>
+      </form>
+
+      <div class="divider">
+        <span>or</span>
+      </div>
+
+      <p class="register-link">
+        Don't have an account? <a href="/register" class="register-btn">Create Account</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Add focus animations to inputs
+    document.querySelectorAll('.animated-input').forEach(input => {
+      input.addEventListener('focus', function() {
+        this.parentElement.classList.add('focused');
+      });
+      
+      input.addEventListener('blur', function() {
+        if (!this.value) {
+          this.parentElement.classList.remove('focused');
+        }
+      });
+    });
+
+    // Add loading animation to button
+    document.querySelector('.login-form').addEventListener('submit', function(e) {
+      const btn = document.querySelector('.login-btn');
+      btn.classList.add('loading');
+      btn.querySelector('.btn-text').textContent = 'Signing In...';
+    });
+  </script>
+
+  <footer class="animate__animated animate__fadeInUp">
+    &copy; 2025 CampusFit | Built with ❤️ for Future Achievers
+  </footer>
+</body>
+</html>

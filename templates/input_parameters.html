@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Details | CampusFit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/input_parameters.css') }}">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/animations.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="modern-header">
+        <a href="/dashboard" class="header-logo">
+            <h1>
+                CampusFit <span class="logo-icon">🎓</span>
+            </h1>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/dashboard" class="nav-link">
+                <i class="fas fa-home"></i> Home
+            </a>
+            <a href="/aptitude_test" class="nav-link">
+                <i class="fas fa-brain"></i> Aptitude
+            </a>
+            <a href="/technical_test" class="nav-link">
+                <i class="fas fa-code"></i> Technical
+            </a>
+            <a href="/communication_test" class="nav-link">
+                <i class="fas fa-comments"></i> Communication
+            </a>
+            <a href="/upload_resume" class="nav-link">
+                <i class="fas fa-file-upload"></i> Resume
+            </a>
+            <a href="/input_parameters" class="nav-link active primary">
+                <i class="fas fa-graduation-cap"></i> Academic Details
+            </a>
+            <a href="/results" class="nav-link">
+                <i class="fas fa-chart-bar"></i> Results
+            </a>
+            <a href="/logout" class="nav-link logout">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    Academic Profile
+                </h1>
+                <p class="hero-description">
+                    Help us understand your academic background and achievements to provide personalized placement insights
+                </p>
+            </div>
+            <div class="hero-visual">
+                <div class="academic-icons">
+                    <div class="icon-card">
+                        <i class="fas fa-chart-line"></i>
+                        <span>CGPA</span>
+                    </div>
+                    <div class="icon-card">
+                        <i class="fas fa-certificate"></i>
+                        <span>Certificates</span>
+                    </div>
+                    <div class="icon-card">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>Projects</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Progress Indicator -->
+        <div class="progress-section">
+            <div class="progress-container">
+                <div class="progress-info">
+                    <h3>Profile Completion</h3>
+                    <span class="progress-percentage" id="progress-percentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <form method="post" action="{{ url_for('input_parameters') }}" class="academic-form">
+            <!-- Form Cards -->
+            <div class="form-cards">
+                <!-- Academic Performance Card -->
+                <div class="form-card academic-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="card-title">
+                            <h3>Academic Performance</h3>
+                            <p>Your educational background and achievements</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="cgpa">
+                                    <i class="fas fa-chart-line"></i>
+                                    CGPA Score
+                                </label>
+                                <div class="input-wrapper">
+                                    <input type="number" id="cgpa" name="cgpa" min="0" max="10" step="0.01" placeholder="Enter your CGPA" required>
+                                    <span class="input-suffix">/ 10</span>
+                                </div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="backlogs">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    Current Backlogs
+                                </label>
+                                <div class="input-wrapper">
+                                    <input type="number" id="backlogs" name="backlogs" min="0" placeholder="Number of backlogs" required>
+                                    <span class="input-suffix">backlogs</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group full-width">
+                            <label for="Branch">
+                                <i class="fas fa-university"></i>
+                                Engineering Branch
+                            </label>
+                            <div class="select-wrapper">
+                                <select id="Branch" name="Branch" required>
+                                    <option value="" disabled selected>Choose your branch</option>
+                                    <option value="CSE">Computer Science Engineering (CSE)</option>
+                                    <option value="ISE">Information Science Engineering (ISE)</option>
+                                    <option value="ECE">Electronics & Communication (ECE)</option>
+                                    <option value="EEE">Electrical & Electronics (EEE)</option>
+                                    <option value="ME">Mechanical Engineering (ME)</option>
+                                    <option value="CE">Civil Engineering (CE)</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <i class="fas fa-chevron-down select-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Co-Curricular Achievements Card -->
+                <div class="form-card achievements-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="card-title">
+                            <h3>Co-Curricular Achievements</h3>
+                            <p>Your projects, certificates, and experiences</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-content">
+                        <div class="achievements-grid">
+                            <div class="achievement-item">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div class="achievement-input">
+                                    <label for="hackathons">Hackathons Attended</label>
+                                    <input type="number" id="hackathons" name="hackathons" min="0" placeholder="0" required>
+                                </div>
+                            </div>
+                            
+                            <div class="achievement-item">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <div class="achievement-input">
+                                    <label for="certificates">Certificates Owned</label>
+                                    <input type="number" id="certificates" name="certificates" min="0" placeholder="0" required>
+                                </div>
+                            </div>
+                            
+                            <div class="achievement-item">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div class="achievement-input">
+                                    <label for="internship">Internships Completed</label>
+                                    <input type="number" id="internship" name="internship" min="0" placeholder="0" required>
+                                </div>
+                            </div>
+                            
+                            <div class="achievement-item">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-project-diagram"></i>
+                                </div>
+                                <div class="achievement-input">
+                                    <label for="Projects">Major Projects</label>
+                                    <input type="number" id="Projects" name="Projects" min="0" placeholder="0" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tips Section -->
+            <div class="tips-section">
+                <div class="tips-header">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Tips for Better Results</h3>
+                </div>
+                <div class="tips-grid">
+                    <div class="tip-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Provide accurate CGPA and backlog information</span>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Include all relevant certificates and achievements</span>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Count only significant projects and internships</span>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Be honest about your current academic status</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Section -->
+            <div class="submit-section">
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>Continue to Assessment Tests</span>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <footer class="animate__animated animate__fadeInUp">
+        &copy; 2025 CampusFit | Built with ❤️ for Future Achievers
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.academic-form');
+            const inputs = form.querySelectorAll('input, select');
+            const progressFill = document.getElementById('progress-fill');
+            const progressPercentage = document.getElementById('progress-percentage');
+
+            // Progress tracking
+            function updateProgress() {
+                const filledInputs = Array.from(inputs).filter(input => input.value.trim() !== '');
+                const progress = (filledInputs.length / inputs.length) * 100;
+                
+                progressFill.style.width = `${progress}%`;
+                progressPercentage.textContent = `${Math.round(progress)}%`;
+                
+                // Add animation class
+                if (progress > 0) {
+                    progressFill.classList.add('animate');
+                }
+            }
+
+            inputs.forEach(input => {
+                input.addEventListener('input', updateProgress);
+                input.addEventListener('change', updateProgress);
+                
+                // Add focus effects
+                input.addEventListener('focus', function() {
+                    this.parentElement.classList.add('focused');
+                });
+                
+                input.addEventListener('blur', function() {
+                    if (!this.value) {
+                        this.parentElement.classList.remove('focused');
+                    }
+                });
+            });
+
+            // Form submission with validation and debugging
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); // Prevent default submission for debugging
+                
+                // Debug: Log all form values
+                console.log('Form submission - Values being sent:');
+                const formData = new FormData(form);
+                for (let [key, value] of formData.entries()) {
+                    console.log(`  ${key}: ${value}`);
+                }
+                
+                // Validate form
+                let isValid = true;
+                const requiredFields = ['cgpa', 'backlogs', 'hackathons', 'certificates', 'internship', 'Projects', 'Branch'];
+                
+                requiredFields.forEach(fieldName => {
+                    const field = form.querySelector(`[name="${fieldName}"]`);
+                    if (!field || !field.value.trim()) {
+                        console.error(`Missing required field: ${fieldName}`);
+                        isValid = false;
+                        field.classList.add('error');
+                    } else {
+                        field.classList.remove('error');
+                    }
+                });
+                
+                // Validate CGPA range
+                const cgpaField = form.querySelector('[name="cgpa"]');
+                if (cgpaField && cgpaField.value) {
+                    const cgpa = parseFloat(cgpaField.value);
+                    if (cgpa < 0 || cgpa > 10) {
+                        console.error('CGPA must be between 0 and 10');
+                        isValid = false;
+                        cgpaField.classList.add('error');
+                    }
+                }
+                
+                if (isValid) {
+                    console.log('Form is valid, submitting...');
+                    const submitBtn = document.querySelector('.submit-btn');
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Processing...</span>';
+                    submitBtn.disabled = true;
+                    
+                    // Submit the form
+                    form.submit();
+                } else {
+                    console.error('Form validation failed');
+                    alert('Please fill in all required fields correctly. CGPA must be between 0 and 10.');
+                }
+            });
+
+            // Card animations
+            const cards = document.querySelectorAll('.form-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach(card => observer.observe(card));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - Placement Readiness Portal</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/s1.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .error-message {
+      color: #ff6b6b;
+      margin-bottom: 15px;
+      text-align: center;
+      background: rgba(255, 107, 107, 0.1);
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 107, 107, 0.3);
+      animation: shake 0.5s ease-in-out;
+    }
+    
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+    }
+  </style>
+</head>
+<body>
+    <header class="header auth-header">
+        <a href="/dashboard" class="logo">
+            <h1 class="logo-text">
+                CampusFit <span>🎓</span>
+            </h1>
+        </a>
+        
+        <nav class="nav-links">
+            <a href="/aptitude_test" class="nav-link">
+                <i class="fas fa-brain"></i>
+                <span>Aptitude</span>
+            </a>
+            <a href="/technical_test" class="nav-link">
+                <i class="fas fa-code"></i>
+                <span>Technical</span>
+            </a>
+            <a href="/communication_test" class="nav-link">
+                <i class="fas fa-comments"></i>
+                <span>Communication</span>
+            </a>
+            <a href="/upload_resume" class="nav-link">
+                <i class="fas fa-file-alt"></i>
+                <span>Resume</span>
+            </a>
+            <a href="/results" class="nav-link">
+                <i class="fas fa-chart-bar"></i>
+                <span>Results</span>
+            </a>
+        </nav>
+    </header>
+    
+  <div class="background-overlay">
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+      <div class="shape shape-5"></div>
+    </div>
+    
+    <div class="login-container">
+      <div class="logo-container">
+        <div class="logo-icon">
+          <i class="fas fa-user-plus"></i>
+        </div>
+        <h1 id="logo">Join CampusFit</h1>
+        <p class="subtitle">Create your account to get started</p>
+      </div>
+      
+      {% if error %}
+      <div class="error-message">
+        <i class="fas fa-exclamation-triangle"></i>
+        {{ error }}
+      </div>
+      {% endif %}
+      
+      <form action="{{ url_for('register') }}" method="post" class="login-form">
+        <div class="input-group">
+          <div class="input-wrapper">
+            <i class="fas fa-user input-icon"></i>
+            <input type="text" 
+                   name="username" 
+                   placeholder="Choose a username" 
+                   required 
+                   aria-label="Username"
+                   class="animated-input">
+            <div class="input-line"></div>
+          </div>
+        </div>
+        
+        <div class="input-group">
+          <div class="input-wrapper">
+            <i class="fas fa-envelope input-icon"></i>
+            <input type="email" 
+                   name="email" 
+                   placeholder="Your email address" 
+                   required 
+                   aria-label="Email"
+                   class="animated-input">
+            <div class="input-line"></div>
+          </div>
+        </div>
+        
+        <div class="input-group">
+          <div class="input-wrapper">
+            <i class="fas fa-lock input-icon"></i>
+            <input type="password" 
+                   name="password" 
+                   placeholder="Create a password" 
+                   required 
+                   aria-label="Password"
+                   class="animated-input">
+            <div class="input-line"></div>
+          </div>
+        </div>
+        
+        <div class="options">
+          <label class="checkbox-container">
+            <input type="checkbox" name="terms" required>
+            <span class="checkmark"></span>
+            I agree to the <a href="#" class="terms-link">Terms & Conditions</a>
+          </label>
+        </div>
+        
+        <button type="submit" class="login-btn">
+          <span class="btn-text">Create Account</span>
+          <i class="fas fa-arrow-right btn-icon"></i>
+        </button>
+      </form>
+
+      <div class="divider">
+        <span>or</span>
+      </div>
+
+      <p class="register-link">
+        Already have an account? <a href="/login" class="register-btn">Sign In</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Add focus animations to inputs
+    document.querySelectorAll('.animated-input').forEach(input => {
+      input.addEventListener('focus', function() {
+        this.parentElement.classList.add('focused');
+      });
+      
+      input.addEventListener('blur', function() {
+        if (!this.value) {
+          this.parentElement.classList.remove('focused');
+        }
+      });
+    });
+
+    // Add loading animation to button
+    document.querySelector('.login-form').addEventListener('submit', function(e) {
+      const btn = document.querySelector('.login-btn');
+      btn.classList.add('loading');
+      btn.querySelector('.btn-text').textContent = 'Creating Account...';
+    });
+
+    // Add password strength indicator
+    document.querySelector('input[name="password"]').addEventListener('input', function() {
+      const password = this.value;
+      const strength = getPasswordStrength(password);
+      updatePasswordStrengthIndicator(strength);
+    });
+
+    function getPasswordStrength(password) {
+      let score = 0;
+      if (password.length >= 8) score++;
+      if (/[a-z]/.test(password)) score++;
+      if (/[A-Z]/.test(password)) score++;
+      if (/[0-9]/.test(password)) score++;
+      if (/[^A-Za-z0-9]/.test(password)) score++;
+      return score;
+    }
+
+    function updatePasswordStrengthIndicator(strength) {
+      const inputWrapper = document.querySelector('input[name="password"]').parentElement;
+      const existingIndicator = inputWrapper.querySelector('.password-strength');
+      
+      if (existingIndicator) {
+        existingIndicator.remove();
+      }
+      
+      if (strength > 0) {
+        const indicator = document.createElement('div');
+        indicator.className = 'password-strength';
+        indicator.innerHTML = `
+          <div class="strength-bar">
+            <div class="strength-fill strength-${strength}"></div>
+          </div>
+          <span class="strength-text">${getStrengthText(strength)}</span>
+        `;
+        inputWrapper.appendChild(indicator);
+      }
+    }
+
+    function getStrengthText(strength) {
+      const texts = ['', 'Weak', 'Fair', 'Good', 'Strong', 'Very Strong'];
+      return texts[strength] || '';
+    }
+  </script>
+
+  <footer class="animate__animated animate__fadeInUp">
+    &copy; 2025 CampusFit | Built with ❤️ for Future Achievers
+  </footer>
+</body>
+</html>

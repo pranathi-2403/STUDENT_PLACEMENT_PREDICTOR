@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Test Start | CampusFit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/test_confirmation.css') }}" />
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="modern-header">
+        <a href="/dashboard" class="header-logo">
+            <h1>
+                CampusFit <span class="logo-icon">🎓</span>
+            </h1>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/dashboard" class="nav-link">
+                <i class="fas fa-home"></i> Home
+            </a>               
+            <a href="/upload_resume" class="nav-link">
+                <i class="fas fa-file-upload"></i> Resume
+            </a>
+            <a href="input_parameters" class="nav-link">
+                <i class="fas fa-graduation-cap"></i> Academic Details
+            </a>
+            <a href="/test_confirmation" class="nav-link active primary">
+                <i class="fas fa-clipboard-check"></i> Confirm Details
+            </a>
+            <a href="/logout" class="nav-link logout">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <i class="fas fa-clipboard-check"></i>
+                    Ready to Start?
+                </h1>
+                <p class="hero-description">
+                    Review your academic details before beginning the assessment tests
+                </p>
+            </div>
+            <div class="hero-visual">
+                <div class="checklist-icons">
+                    <div class="icon-card">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>Profile</span>
+                    </div>
+                    <div class="icon-card">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Academic</span>
+                    </div>
+                    <div class="icon-card">
+                        <i class="fas fa-trophy"></i>
+                        <span>Achievements</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Profile Summary Card -->
+        <div class="summary-card">
+            <div class="card-header">
+                <div class="card-icon">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <div class="card-title">
+                    <h3>Your Academic Profile</h3>
+                    <p>Review and confirm your details</p>
+                </div>
+            </div>
+            
+            <div class="card-content">
+                <div class="profile-grid">
+                    <div class="profile-item">
+                        <div class="profile-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="profile-info">
+                            <label>Username</label>
+                            <span>{{ username }}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-item">
+                        <div class="profile-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="profile-info">
+                            <label>CGPA Score</label>
+                            <span>{{ cgpa }}/10</span>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-item">
+                        <div class="profile-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="profile-info">
+                            <label>Current Backlogs</label>
+                            <span>{{ backlogs }}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-item">
+                        <div class="profile-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="profile-info">
+                            <label>Branch</label>
+                            <span>{{ Branch }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Achievements Card -->
+        <div class="achievements-card">
+            <div class="card-header">
+                <div class="card-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div class="card-title">
+                    <h3>Co-Curricular Achievements</h3>
+                    <p>Your projects, certificates, and experiences</p>
+                </div>
+            </div>
+            
+            <div class="card-content">
+                <div class="achievements-grid">
+                    <div class="achievement-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="achievement-info">
+                            <label>Hackathons Attended</label>
+                            <span>{{ hackathons }}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="achievement-info">
+                            <label>Certificates Owned</label>
+                            <span>{{ certificates }}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="achievement-info">
+                            <label>Internships Completed</label>
+                            <span>{{ internship }}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="achievement-info">
+                            <label>Major Projects</label>
+                            <span>{{ Projects }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Section -->
+        <div class="action-section">
+            <div class="action-info">
+                <i class="fas fa-info-circle"></i>
+                <p>Please review your information before starting the assessment tests. All fields must be accurate for the best prediction results.</p>
+            </div>
+            
+            <div class="action-buttons">
+                <form method="post" class="action-form">
+                    <button type="submit" name="action" value="confirm" class="confirm-btn">
+                        <i class="fas fa-play"></i>
+                        <span>Start Tests Now</span>
+                    </button>
+                    <button type="submit" name="action" value="edit" class="edit-btn">
+                        <i class="fas fa-edit"></i>
+                        <span>Edit Details</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="animate__animated animate__fadeInUp">
+        &copy; 2025 CampusFit | Built with ❤️ for Future Achievers
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Card animations
+            const cards = document.querySelectorAll('.summary-card, .achievements-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach(card => observer.observe(card));
+
+            // Button hover effects
+            const buttons = document.querySelectorAll('.confirm-btn, .edit-btn');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-3px) scale(1.02)';
+                });
+                
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

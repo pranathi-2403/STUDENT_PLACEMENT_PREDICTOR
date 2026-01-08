@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upload Resume | CampusFit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/static/css/upload_resume.css">
+  <link rel="stylesheet" href="/static/css/header.css">
+  <link rel="stylesheet" href="/static/css/animations.css">
+  <link rel="stylesheet" href="/static/css/footer.css">
+</head>
+<body>
+  <div class="main">
+    <header class="modern-header">
+        <a href="/dashboard" class="header-logo">
+            <h1>
+                CampusFit <span class="logo-icon">🎓</span>
+            </h1>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/dashboard" class="nav-link">
+                <i class="fas fa-home"></i> Home
+            </a>
+            
+            <a href="/upload_resume" class="nav-link active primary">
+                <i class="fas fa-file-upload"></i> Resume
+            </a>
+            
+            <a href="/logout" class="nav-link logout">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </nav>
+    </header>
+
+    <!-- Enhanced Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <i class="fas fa-robot"></i>
+                    <span>AI-Powered Analysis</span>
+                </div>
+                <h1 class="hero-title">
+                    Transform Your Resume with 
+                    <span class="highlight">Smart Insights</span>
+                </h1>
+                <p class="hero-description">
+                    Upload your resume and get instant AI-powered analysis, quality scoring, and personalized recommendations to boost your placement success rate.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Accuracy Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">< 30s</div>
+                        <div class="stat-label">Analysis Time</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">8+</div>
+                        <div class="stat-label">Analysis Areas</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-cards">
+                    <div class="floating-card card-1">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Quality Score</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Smart Tips</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-target"></i>
+                        <span>ATS Optimized</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Progress Indicator -->
+    <div class="progress-section">
+        <div class="progress-container">
+            <div class="progress-step active">
+                <div class="step-icon">
+                    <i class="fas fa-file-upload"></i>
+                </div>
+                <span class="step-label">Upload Resume</span>
+                <div class="step-status">Current</div>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step">
+                <div class="step-icon">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                
+                <div class="step-status">Next</div>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step">
+                <div class="step-icon">
+                    <i class="fas fa-clipboard-check"></i>
+                </div>
+                <span class="step-label">Assessment</span>
+                <div class="step-status">Final</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content - Redesigned Upload & Analysis -->
+    <div class="main-content">
+        <div class="upload-analysis-container">
+            <!-- Enhanced Upload Section -->
+            <div class="upload-section">
+                <div class="section-header">
+                    <div class="header-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <div class="header-content">
+                        <h2>Upload Your Resume</h2>
+                        <p>Get started with our comprehensive resume analysis</p>
+                    </div>
+                </div>
+
+                <div class="upload-guide">
+                    <div class="guide-header">
+                        <h3><i class="fas fa-info-circle"></i> Quick Guide</h3>
+                        <p>Follow these simple steps for best results</p>
+                    </div>
+                    <div class="guide-steps">
+                        <div class="guide-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Choose Your File</h4>
+                                <p>Select a PDF, DOC, or DOCX file (max 5MB)</p>
+                            </div>
+                        </div>
+                        <div class="guide-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Upload & Analyze</h4>
+                                <p>Our AI will analyze your resume in seconds</p>
+                            </div>
+                        </div>
+                        <div class="guide-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Get Results</h4>
+                                <p>Receive detailed feedback and recommendations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form method="post" enctype="multipart/form-data" class="upload-form">
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-zone" id="drop-zone">
+                            <input type="file" name="resume" id="resume" accept=".pdf,.doc,.docx" hidden required>
+                            <div class="upload-content">
+                                <div class="upload-icon">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                </div>
+                                <div class="upload-text">
+                                    <h3>Drop your resume here</h3>
+                                    <p>or <span id="file-select-text" class="click-upload">click to browse</span></p>
+                                </div>
+                                <div class="file-types">
+                                    <span class="file-type">PDF</span>
+                                    <span class="file-type">DOC</span>
+                                    <span class="file-type">DOCX</span>
+                                </div>
+                                <div class="upload-tip">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Tip: PDF format works best for analysis</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-info" id="fileInfo"></div>
+
+                    <div id="analyzingMsg" class="analyzing-message" style="display: none;">
+                        <div class="analyzing-content">
+                            <div class="analyzing-header">
+                                <div class="spinner"></div>
+                                <h4>Analyzing your resume...</h4>
+                            </div>
+                            <p>Our AI is evaluating your resume quality and extracting key insights</p>
+                            <div class="analysis-progress">
+                                <div class="progress-step">
+                                    <i class="fas fa-check"></i>
+                                    <span>Checking format and structure</span>
+                                </div>
+                                <div class="progress-step">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                    <span>Analyzing content quality</span>
+                                </div>
+                                <div class="progress-step">
+                                    <i class="far fa-circle"></i>
+                                    <span>Generating recommendations</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="upload-btn" disabled>
+                        <i class="fas fa-upload"></i> 
+                        <span>Upload & Analyze Resume</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Enhanced Analysis Section -->
+            <div class="analysis-section">
+                <div class="section-header">
+                    <div class="header-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="header-content">
+                        <h2>Resume Analysis</h2>
+                        <p>Get instant feedback and quality insights</p>
+                    </div>
+                </div>
+
+                <div class="analysis-content">
+                    {% if resume_score %}
+                    <div class="analysis-results">
+                        <div class="score-section">
+                            <div class="score-display">
+                                <div class="score-circle">
+                                    <span class="score-number">{{ resume_score }}</span>
+                                    <span class="score-max">/10</span>
+                                </div>
+                                <div class="score-details">
+                                    <h4>Resume Quality Score</h4>
+                                    <p>Based on format, content, skills, and structure analysis</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feedback-section">
+                            {% if resume_score >= 8 %}
+                                <div class="feedback-card excellent">
+                                    <div class="feedback-header">
+                                        <i class="fas fa-star"></i>
+                                        <h5>🌟 Excellent Resume!</h5>
+                                    </div>
+                                    <p>Your resume is well-structured and optimized for success!</p>
+                                    <div class="feedback-highlights">
+                                        <h6>What's working well:</h6>
+                                        <ul>
+                                            <li>Strong content structure and formatting</li>
+                                            <li>Good balance of skills and experience</li>
+                                            <li>Effective use of action verbs</li>
+                                            <li>Professional presentation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            {% elif resume_score >= 5 %}
+                                <div class="feedback-card good">
+                                    <div class="feedback-header">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        <h5>⚠️ Good job, but there's room to improve</h5>
+                                    </div>
+                                    <p>Here are specific tips to enhance your resume:</p>
+                                    <div class="feedback-highlights">
+                                        <h6>Improvement suggestions:</h6>
+                                        <ul>
+                                            <li>Review and fix grammar or spelling errors</li>
+                                            <li>Use bullet points to organize content more clearly</li>
+                                            <li>Include strong action verbs like <em>Led</em>, <em>Developed</em>, or <em>Achieved</em></li>
+                                            <li>Ensure all essential sections are present</li>
+                                            <li>Add quantifiable achievements where possible</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="feedback-card needs-improvement">
+                                    <div class="feedback-header">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                        <h5>🚨 Needs Attention!</h5>
+                                    </div>
+                                    <p>Consider improving these areas:</p>
+                                    <div class="feedback-highlights">
+                                        <h6>Priority improvements:</h6>
+                                        <ul>
+                                            <li>Add missing sections like Education, Skills, Experience</li>
+                                            <li>Fix grammar and spelling mistakes</li>
+                                            <li>Use bullet points for improved readability</li>
+                                            <li>Start sentences with strong action verbs</li>
+                                            <li>Include specific achievements and metrics</li>
+                                            <li>Ensure consistent formatting throughout</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="next-steps">
+                            <div class="next-steps-content">
+                                <h4>Ready for the next step?</h4>
+                                <p>Complete your assessment to get personalized placement predictions</p>
+                                <a href="{{ url_for('input_parameters') }}" class="continue-btn">
+                                    <i class="fas fa-arrow-right"></i>
+                                    Continue to Assessment
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="analysis-prompt">
+                        <div class="prompt-content">
+                            <div class="prompt-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h4>Ready to Analyze?</h4>
+                            <p>Upload your resume to get started with our AI-powered analysis and receive personalized recommendations for improvement.</p>
+                            <div class="prompt-features">
+                                <div class="prompt-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Instant Quality Score</span>
+                                </div>
+                                <div class="prompt-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Detailed Feedback</span>
+                                </div>
+                                <div class="prompt-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Personalized Tips</span>
+                                </div>
+                                <div class="prompt-feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>ATS Optimization</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Enhanced What We Analyze Section -->
+        <div class="analysis-features-section">
+            <div class="features-header">
+                
+                <h3>What We Analyze</h3>
+                <p>Our AI-powered system evaluates your resume across multiple dimensions for comprehensive insights</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Skills & Competencies</h4>
+                        <p>Identify key skills and technical competencies</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Education & Certifications</h4>
+                        <p>Evaluate academic background and certifications</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Work Experience</h4>
+                        <p>Analyze professional experience and achievements</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Projects & Achievements</h4>
+                        <p>Review project work and notable accomplishments</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-list-check"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Section Completeness</h4>
+                        <p>Check for essential resume sections</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-spell-check"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Grammar & Spelling</h4>
+                        <p>Identify language and formatting issues</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-list-ul"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Bullet Point Usage</h4>
+                        <p>Evaluate content organization and readability</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Action Verbs</h4>
+                        <p>Assess impact and achievement language</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="animate__animated animate__fadeInUp">
+      &copy; 2025 CampusFit | Built with ❤️ for Future Achievers
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const fileInput = document.getElementById('resume');
+      const dropZone = document.getElementById('drop-zone');
+      const fileSelectText = document.getElementById('file-select-text');
+      const fileInfo = document.getElementById('fileInfo');
+      const submitBtn = document.querySelector('.upload-btn');
+      const analyzingMsg = document.getElementById('analyzingMsg');
+
+      // 🔒 Prevent double trigger
+      fileSelectText.addEventListener('click', (e) => {
+        e.stopPropagation();  // Prevent bubbling to drop zone
+        fileInput.click();
+      });
+
+      dropZone.addEventListener('click', () => {
+        fileInput.click();
+      });
+
+      fileInput.addEventListener('change', () => {
+        if (fileInput.files.length) {
+          const file = fileInput.files[0];
+          if (file.size > 5 * 1024 * 1024) {
+            fileInfo.innerHTML = '<div class="error"><i class="fas fa-exclamation-circle"></i> File size exceeds 5MB. Please choose a smaller file.</div>';
+            submitBtn.disabled = true;
+            return;
+          }
+          const fileName = file.name.length > 30
+            ? file.name.slice(0, 15) + '...' + file.name.slice(-15)
+            : file.name;
+
+          fileInfo.innerHTML = `
+            <div class="success">
+              <i class="fas fa-check-circle"></i>
+              <span>${fileName}</span>
+              <span class="file-size">(${(file.size / 1024 / 1024).toFixed(2)} MB)</span>
+              <button type="button" class="remove-file" onclick="removeFile()">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>`;
+          submitBtn.disabled = false;
+        }
+      });
+
+      // Drag & drop
+      dropZone.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        dropZone.classList.add("dragover");
+      });
+
+      dropZone.addEventListener("dragleave", () => {
+        dropZone.classList.remove("dragover");
+      });
+
+      dropZone.addEventListener("drop", (e) => {
+        e.preventDefault();
+        dropZone.classList.remove("dragover");
+        if (e.dataTransfer.files.length) {
+          fileInput.files = e.dataTransfer.files;
+          const event = new Event("change", { bubbles: true });
+          fileInput.dispatchEvent(event);
+        }
+      });
+
+      document.querySelector(".upload-form").addEventListener("submit", () => {
+        analyzingMsg.style.display = "block";
+        // Update progress indicator
+        document.querySelectorAll('.progress-step')[1].classList.add('active');
+      });
+
+      // Remove file function
+      window.removeFile = function() {
+        fileInput.value = '';
+        fileInfo.innerHTML = '';
+        submitBtn.disabled = true;
+      };
+
+      // Add animation classes
+      const animateElements = document.querySelectorAll('.feature-item, .hero-text, .hero-visual, .guide-step');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      animateElements.forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
